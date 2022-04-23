@@ -8,7 +8,7 @@ function getRandomInt (min, max){
 } 
 
 //Declaração de variáveis:
-let elementos = ['PEDRA', 'PAPEL', 'TESOURA'];
+let elementos = ['aleatorio', 'PEDRA', 'PAPEL', 'TESOURA'];
 let random = 0;
 let jogador = '';
 let bot = 0;
@@ -39,9 +39,9 @@ do {
     //Inicio da execução:
     for ( let i = 1; i <= turnos; i++) {
         console.log(`
-        [0] PEDRA
-        [1] PAPEL
-        [2] TESOURA`);
+        [1] PEDRA
+        [2] PAPEL
+        [3] TESOURA`);
     
         console.log();
     
@@ -51,11 +51,11 @@ do {
         jogador = +prompt('');
         console.clear();
     
-        while (jogador !== 0 && jogador !== 1 && jogador !== 2) {
+        while (jogador !== 1 && jogador !== 2 && jogador !== 3) {
             console.log(`POR FAVOR, INSIRA UM VALOR DE ELEMENTO VÁLIDO!
-        [0] PEDRA
-        [1] PAPEL
-        [2] TESOURA`)
+        [1] PEDRA
+        [2] PAPEL
+        [3] TESOURA`)
             jogador = +prompt('');
             console.clear();
         }
@@ -86,6 +86,7 @@ do {
     }
 
     console.log();
+    
     //Placar final:
     console.log(`TOTAL DE ${turnos} TURNOS`)
     console.log(`BOT ${placarBot} e JOGADOR(A) ${placarJogador}. TURNOS EMPATADOS ${empate}`); // PLACAR
