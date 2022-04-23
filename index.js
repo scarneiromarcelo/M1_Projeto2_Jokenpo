@@ -8,7 +8,7 @@ function getRandomInt (min, max){
 } 
 
 //Declaração de variáveis:
-let elementos = ['aleatorio', 'PEDRA', 'PAPEL', 'TESOURA'];
+let elementos = ['0', 'PEDRA', 'PAPEL', 'TESOURA'];
 let random = 0;
 let jogador = '';
 let bot = 0;
