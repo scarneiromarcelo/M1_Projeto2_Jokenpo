@@ -2,8 +2,8 @@ const prompt = require('prompt-sync')();
 
 // Função para gerar números randômicos
 function getRandomInt (min, max){
-    min = Math.ceil(0);
-    max = Math.floor(2);
+    min = Math.ceil(1);
+    max = Math.floor(3);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 } 
 
@@ -63,16 +63,17 @@ do {
         jogador = elementos[jogador];
     
         //Condição de vitória:
-        if (jogador == elementos[2] && bot == elementos[1] || bot == elementos[0]) {
+        if (jogador == elementos[3] && bot == elementos[2] || bot == elementos[1]) {
             console.log('O COMPUTADOR VENCEU A RODADA!');
             placarBot++
-        } else if (bot == elementos[2] && jogador == elementos [1] || jogador == elementos[0]) {
+        } else if (bot == elementos[3] && jogador == elementos [2] || jogador == elementos[1]) {
             console.log('JOGADOR(A) VOCÊ VENCEU A RODADA!');
             placarJogador++
         } else {
             console.log('EMPATE!');
             empate++
-        }         
+        }     
+            
     }
     console.clear();
 
