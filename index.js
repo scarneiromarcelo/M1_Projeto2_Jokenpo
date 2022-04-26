@@ -60,18 +60,59 @@ do {
             console.clear();
         }
     
-        jogador = elementos[jogador];
+        //jogador = elementos[jogador];
     
         //Condição de vitória:
-        if (jogador == elementos[3] && bot == elementos[2] || bot == elementos[1]) {
-            console.log('O COMPUTADOR VENCEU A RODADA!');
-            placarBot++
-        } else if (bot == elementos[3] && jogador == elementos [2] || jogador == elementos[1]) {
-            console.log('JOGADOR(A) VOCÊ VENCEU A RODADA!');
-            placarJogador++
-        } else {
-            console.log('EMPATE!');
-            empate++
+        if(random == 1){
+            if(jogador == 1) {
+              console.log("EMPATE..")              
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              empate++
+            }
+              else if(jogador == 2) {
+                console.log("JOGADOR(A) VENCE!!")
+                console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+                placarJogador++
+              } else {
+                console.log("COMPUTADOR VENCE!!")
+                console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+                placarBot++              
+              }
+          
+        }
+        
+        else if(random == 2) {
+            if(jogador == 1) {
+              console.log("COMPUTADOR VENCE!!")
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              placarBot++
+            } else if(jogador == 2) {
+              console.log("EMPATE..")
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              empate++
+            } else {
+              console.log("JOGADOR(A) VENCE!!")
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              placarJogador++
+            }
+        }
+
+        else {
+            if(jogador == 1) {
+              console.log("JOGADOR(A) VENCE!!")
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              placarJogador++
+            }
+            else if(jogador == 2) {
+              console.log("COMPUTADOR VENCE!!")
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              placarBot++            
+            }
+            else {
+              console.log("EMPATE..")
+              console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
+              empate++
+            }
         }     
             
     }
@@ -80,9 +121,9 @@ do {
     //Condição de vitória:
     if (placarBot > placarJogador) {
         console.log('O COMPUTADOR É O GRANDE CAMPEÃO! TENTE NOVAMENTE..');
-    } else if (placarBot < placarJogador) {
+    } if (placarBot < placarJogador) {
         console.log('VOCÊ VENCEU A MÁQUINA! PARABÉNS..');
-    } else if (placarBot == placarJogador) {
+    } if (placarBot == placarJogador) {
         console.log('EMPATE! SE ESTIVER COM TEMPO JOGUE NOVAMENTE!')
     }
 
