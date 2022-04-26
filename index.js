@@ -58,9 +58,7 @@ do {
         [3] TESOURA`)
             jogador = +prompt('');
             console.clear();
-        }
-    
-        //jogador = elementos[jogador];
+        }        
     
         //Condição de vitória:
         if(random == 1){
@@ -73,12 +71,11 @@ do {
                 console.log("JOGADOR(A) VENCE!!")
                 console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
                 placarJogador++
-              } else {
+            } else {
                 console.log("COMPUTADOR VENCE!!")
                 console.log(`Jogador ${elementos[jogador]} e bot ${elementos[random]}`);
                 placarBot++              
-              }
-          
+            }
         }
         
         else if(random == 2) {
@@ -114,7 +111,6 @@ do {
               empate++
             }
         }     
-            
     }
     console.clear();
 
